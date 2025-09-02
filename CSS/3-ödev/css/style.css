@@ -102,37 +102,38 @@ article{
     display: inline-flex;
     float: right;
     margin-left: 10px;
-
+    box-sizing: content-box;
+    font-family: Arial,sans-serif;
 
 }
 
 
-footer{
+.div-last-before{
 
-    background-color: #131212;
-    margin-top: 260px;
-    height: auto;
-    width : auto;
+    padding: 0 20px;
     color: white;
-    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(19, 18, 18);
+    margin-top: 250px;
+    position: static;
+    z-index: auto;
+    box-sizing: content-box;
+    font-family: Arial,sans-serif;
 
 
 }
 
 
-.div-last-left{
+.div-last{
 
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: rgb(19, 18, 18);
 }
-
-
-
-.div-last-right{
-
-    float: right;
-}
-
-
 
 
 .footer-last-links{

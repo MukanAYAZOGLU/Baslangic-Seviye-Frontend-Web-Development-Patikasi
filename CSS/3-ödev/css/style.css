@@ -9,8 +9,9 @@ header{
     position: absolute;
     right: 100px;
     width: 200px;
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 14px;
+    margin-top: 10px;
 
 }
 
@@ -37,12 +38,14 @@ header{
 
 article{
     color: white;
-    font-size: 120px;
-    margin-top: 100px;
-    margin-bottom: -45px;
+    font-size: 100px;
+    margin-top: 90px;
+    margin-bottom: -50px;
     display: block;
     right: 100px;
     text-align: center;
+    width: 100%;
+
 
 }
 
@@ -54,9 +57,7 @@ article{
     width: 50%;
     height: 45px;
     display: inline-flex;
-    margin-left:  350px;
     border-radius: 30px;
-    margin-right: auto;
 
 
 }
@@ -103,36 +104,44 @@ article{
     float: right;
     margin-left: 10px;
     box-sizing: content-box;
-    font-family: Arial,sans-serif;
 
 }
 
 
 .div-last-before{
 
-    padding: 0 20px;
     color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: rgb(19, 18, 18);
-    margin-top: 250px;
     position: static;
     z-index: auto;
     box-sizing: content-box;
     font-family: Arial,sans-serif;
-
+    margin:200px 0 -10px 0;
+    padding: 0 20px;
 
 }
-
 
 .div-last{
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px;
     background-color: rgb(19, 18, 18);
+    font-family: Arial,sans-serif;
+    margin: -28px 0 0 0;
+    font-size: 14px;
+    position: static;
+    box-sizing: content-box;
+    color: white;
+    height: 40px;
+    z-index: -1;
+    padding: 10px 0 0 25px;
+
+
+
 }
 
 
@@ -141,7 +150,28 @@ article{
     color: white;
     text-decoration-line: none;
     display: inline;
-    margin-right: 15px;
+    margin-right: 10px;
+    font-size: 14px;
 
+}
+
+.buttons{
+
+    background-color: #303134;
+    color: white;
+    font-family: Arial,sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 10px;
+    display: inline-block;
+    justify-content: space-between;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.buttons:hover{
+
+    border: 1px solid #5f6368;
 
 }

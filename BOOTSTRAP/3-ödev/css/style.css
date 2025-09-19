@@ -1,0 +1,71 @@
+.search-img::placeholder{
+
+    background-image: url("../icon/search.svg");
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-size: 5%;
+    text-align: center;
+
+    color: grey;
+
+
+}
+
+.nav-li-img{
+
+    align-items: center;
+}
+
+.nav-li{
+
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.nav-li-a{
+    text-align: center;
+    font-size: 12px;
+}
+
+.card-left{
+    margin-bottom: 7px;
+}
+
+.left-col-card-second-a{
+
+    font-size: 13px;
+    text-decoration-line: none;
+    color: white;
+    text-align: left;
+}
+.left-col-card-second-a:hover{
+
+    text-decoration-line: underline;
+
+}
+
+.left-col-card-fourth{
+    text-align: left;
+    font-size: 12px;
+    text-decoration-line: none;
+    color: white;
+
+}
+
+
+.left-col-card-fourth:hover {
+    text-decoration-line: underline;
+
+}
+
+.left-col-card-fourth-li {
+
+    margin-top: 10px;
+
+}
+
+.left-col-card-fourth-li-img {
+
+    margin-right: 5px;
+
+}

@@ -85,6 +85,7 @@ background-color: lightgrey;
 
 .right-col-card-first-li-p{
 display: inline-block;
+    font-weight: bold;
 }
 
 .right-col-card-first-li-a-span{
@@ -93,4 +94,22 @@ display: inline-block;
     display: inline-block;
 
 
+}
+
+
+.right-col-end-li{
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.right-col-end-a{
+
+    color: grey;
+    text-decoration-line: none;
+    font-size: 12px;
+}
+.right-col-end-a:hover{
+
+    color: blue;
+    text-decoration-line: underline;
 }

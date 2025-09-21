@@ -1,3 +1,5 @@
+
+
 .search-img::placeholder{
 
     background-image: url("../icon/search.svg");
@@ -5,7 +7,6 @@
     background-position: 10%;
     background-size: 5%;
     text-align: center;
-
     color: grey;
 
 
@@ -112,4 +113,11 @@ display: inline-block;
 
     color: blue;
     text-decoration-line: underline;
+}
+
+.middle-col-card-first-form-search::placeholder{
+
+    color: white;
+    font-size: 14px;
+
 }

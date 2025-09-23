@@ -115,9 +115,49 @@ display: inline-block;
     text-decoration-line: underline;
 }
 
+
 .middle-col-card-first-form-search::placeholder{
 
     color: white;
     font-size: 14px;
 
+}
+
+.middle-col-card-first-li{
+    margin: 0 20px;
+}
+
+.middle-col-card-second-a{
+
+    display: inline;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold
+}
+.middle-col-card-second-a:hover{
+    text-decoration-line: underline;
+    color: lightblue;
+}
+
+.middle-col-card-second-a-first{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold
+}
+
+.middle-col-card-second-a-more-exit-icons{
+    text-decoration-line: none;
+}
+.middle-col-card-second-a-more-exit-icons:hover{
+    background-color: grey;
+    border-radius: 50%;
+    background-size: 1rem;
+
+}
+
+.middle-col-second-card-more-dropdown-li-button:hover{
+    background-color: grey;
 }

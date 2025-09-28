@@ -187,3 +187,35 @@ display: inline-block;
 .profile-info-li{
     margin-bottom: -5px;
 }
+
+.post-like-heart-clap-img{
+    width:15px;
+    height:15px;
+    display: inline;
+    background-color: lightgrey;
+    border-radius: 50%;
+    margin-left: -2px;
+}
+
+.post-like-heart-clap-others-a{
+    color: grey;
+    font-size: 14px;
+    text-decoration-line: none;
+
+}
+.post-like-heart-clap-others-a:hover{
+    color: lightblue;
+    text-decoration-line: underline;
+}
+.img-down-post-like-heart-clap-others-li{
+    display: inline;
+    margin-left: 15px;
+
+}
+
+
+.img-down-post-like-heart-clap-others-li-img{
+
+    width: 20px;
+    height: 20px;
+}

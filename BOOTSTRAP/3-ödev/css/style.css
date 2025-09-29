@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.nav-li-img:hover{
+    background-color: black;
+}
+
 
 .nav-li{
 
@@ -220,3 +224,65 @@ display: inline-block;
     width: 20px;
     height: 20px;
 }
+
+.me-card-ul{
+    list-style-type: none;
+    display: block;
+    margin-left: -1rem;
+}
+
+.me-card-ul-head-li{
+    color: white;
+    font-size: 16px;
+    font-weight: bold
+}
+
+.me-card-li{
+    font-size: 14px
+}
+
+
+.me-card-li-a-premium{
+    text-decoration-line: none;
+    font-size: 15px;
+    color: lightgrey
+
+}
+
+.me-card-li-a-premium:hover{
+        color: lightblue;
+
+}
+
+.me-card-li-a{
+    text-decoration-line: none;
+    color: lightslategrey;
+
+}
+.me-card-li-a:hover{
+    text-decoration-line: underline;
+}
+
+.work-card-left-div-ul{
+    list-style-type: none;
+    display: block;
+
+}
+
+.work-card-left-div-ul-header-li{
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: bold
+}
+
+.work-card-left-div-ul-li-a{
+    text-decoration-line: none;
+    color: whitesmoke;
+    font-size: 14px;
+
+}
+
+.work-card-left-div-ul-li-a:hover{
+    text-decoration-line: underline;
+}
+

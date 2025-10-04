@@ -85,7 +85,7 @@
 
 .right-col-card-first-li:hover{
 
-background-color: lightgrey;
+background-color: #5a5656;
 
 }
 
@@ -271,8 +271,20 @@ display: inline-block;
 
 .work-card-left-div-ul-header-li{
     color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.work-card-left-div-ul-headers-li{
+    color: grey;
     font-size: 16px;
-    font-weight: bold
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.work-card-left-div-ul-li{
+    margin-top: 20px;
 }
 
 .work-card-left-div-ul-li-a{
@@ -284,5 +296,67 @@ display: inline-block;
 
 .work-card-left-div-ul-li-a:hover{
     text-decoration-line: underline;
+    text-decoration-color: lightblue;
 }
 
+.work-card-left-div-ul-li-a-img{
+    margin-right: 15px;
+    margin-top: -2px;
+    text-decoration-line: none;
+
+}
+
+.vertical{
+    border-left: 1px solid dimgrey;
+    height: 29rem;
+    position:absolute;
+    left: 50%;
+    margin-top: 5px;
+    margin-left: -8rem;
+}
+
+.navbar-hr-vertical{
+    border-left: 1px solid dimgrey;
+    height: 50px;
+    position:absolute;
+    margin-top: 2px;
+}
+
+.navbar-li-vertical{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.work-card-right-div-ul{
+    list-style-type: none;
+    display: block;
+    margin-left: -32rem;
+
+}
+
+.work-card-right-div-ul-header-li{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.work-card-right-div-ul-li-a{
+    text-decoration-line: none;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.work-card-right-div-ul-li-a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: lightblue;
+
+}
+
+
+.work-card-right-div-ul-li-a-p{
+    text-decoration-line: none;
+    color: grey;
+    font-size: 12px;
+}

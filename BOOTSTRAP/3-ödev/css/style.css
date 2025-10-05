@@ -308,7 +308,7 @@ display: inline-block;
 
 .vertical{
     border-left: 1px solid dimgrey;
-    height: 29rem;
+    height: 29.8rem;
     position:absolute;
     left: 50%;
     margin-top: 5px;
@@ -352,6 +352,7 @@ display: inline-block;
     text-decoration-line: underline;
     text-decoration-color: lightblue;
 
+
 }
 
 
@@ -360,3 +361,43 @@ display: inline-block;
     color: grey;
     font-size: 12px;
 }
+
+.col-right-last-piece-first-button-dropdown-menu-list{
+    font-size: 12px;
+}
+
+
+.col-right-last-piece-first-button-span{
+
+    color: grey;
+    text-decoration-line: none;
+    font-size: 12px;
+}
+.col-right-last-piece-first-button-span:hover{
+
+    color: blue;
+    text-decoration-line: underline;
+}
+
+.col-right-last-piece-first-button-dropdown-menu-list-last-a{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration-line: none;
+    color: white;
+}
+
+.col-right-last-piece-first-button-dropdown-menu-list-last-a:hover{
+
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: lightblue;
+    background-color: transparent ;
+}
+
+.col-right-last-piece-first-button-dropdown-menu-first-list-a:hover{
+    background-color: dimgrey ;
+
+}
+
+
+

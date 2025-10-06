@@ -82,6 +82,10 @@
     color: white;
 }
 
+.right-col-card-first-li:hover{
+    background-color: dimgrey;
+}
+
 
 .right-col-card-first-li:hover{
 
@@ -97,7 +101,6 @@ display: inline-block;
 .right-col-card-first-li-a-span{
     font-size: 12px;
     color: grey;
-    display: inline-block;
 
 
 }

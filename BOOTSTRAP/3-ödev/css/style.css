@@ -101,6 +101,7 @@ display: inline-block;
 .right-col-card-first-li-a-span{
     font-size: 12px;
     color: grey;
+    display: block;
 
 
 }
@@ -121,6 +122,7 @@ display: inline-block;
 
     color: blue;
     text-decoration-line: underline;
+
 }
 
 

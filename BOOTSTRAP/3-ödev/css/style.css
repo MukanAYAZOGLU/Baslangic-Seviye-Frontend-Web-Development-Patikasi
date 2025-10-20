@@ -5,7 +5,7 @@
     background-image: url("../icon/search.svg");
     background-repeat: no-repeat;
     background-position: 10%;
-    background-size: 5%;
+    background-size: 4%;
     text-align: center;
     color: grey;
 
@@ -15,10 +15,6 @@
 .nav-li-img{
 
     align-items: center;
-}
-
-.nav-li-img:hover{
-    background-color: black;
 }
 
 
@@ -37,18 +33,30 @@
     margin-bottom: 7px;
 }
 
-.left-col-card-second-a{
+
+.left-col-second-card-second-div{
 
     font-size: 13px;
     text-decoration-line: none;
     color: white;
     text-align: left;
 }
-.left-col-card-second-a:hover{
+.left-col-second-card-second-div:hover{
 
     text-decoration-line: underline;
 
 }
+
+.left-col-second-card-premium>p>span{
+    color: white;
+}
+
+.left-col-second-card-premium span:hover{
+    color: blue;
+
+}
+
+
 
 .left-col-card-fourth{
     text-align: left;
@@ -134,7 +142,7 @@ display: inline-block;
 }
 
 .middle-col-card-first-li{
-    margin: 0 20px;
+    display: inline-block;
 }
 
 .middle-col-card-second-a{

@@ -1,0 +1,28 @@
+body{
+    background-color: #f1f5f8;
+}
+
+#title{
+    font-family: "Momo Signature", cursive;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: center;
+    color: #ff6a23;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.btn-item{
+    text-align: center;
+    margin-left: 15px;
+    align-items: center;
+
+}
+
+.img-items{
+    width:170px;
+    height:175px;
+    border-radius: 15%;
+    border-color: lightblue;
+    border-style: solid;
+}

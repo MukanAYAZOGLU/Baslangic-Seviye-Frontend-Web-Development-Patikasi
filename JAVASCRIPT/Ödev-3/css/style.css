@@ -16,12 +16,13 @@ body{
     text-align: center;
     margin-left: 15px;
     align-items: center;
+    justify-items: center;
 
 }
 
 .img-items{
-    width:170px;
-    height:175px;
+    width:150px;
+    height:180px;
     border-radius: 15%;
     border-color: lightblue;
     border-style: solid;

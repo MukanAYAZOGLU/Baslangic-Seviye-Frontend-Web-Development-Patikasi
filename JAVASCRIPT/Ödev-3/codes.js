@@ -3,10 +3,6 @@ let korea= document.querySelector("#btnKorea");
 let japan= document.querySelector("#btnKJapan");
 let china= document.querySelector("#btnChina");
 
-console.log(all.value);
-
-
-
 
 let objKorea = { all: {
     1.:"https://twoplaidaprons.com/wp-content/uploads/2020/09/tteokbokki-top-down-view-of-tteokbokki-in-a-bowl-500x500.jpg",
@@ -68,16 +64,14 @@ let objChina = { all: {
     }
 }
 
-let objAll= {...objJapan,...objKorea,...objChina};
-console.log(objAll);
+
+let data= ` `
 
 
 
-korea.addEventListener("click", function(){
+function show(number, whichBtn){
 
 
 
+}
 
-
-
-})

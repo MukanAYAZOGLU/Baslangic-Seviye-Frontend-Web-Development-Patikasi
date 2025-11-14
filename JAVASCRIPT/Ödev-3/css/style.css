@@ -27,3 +27,8 @@ body{
     border-color: lightblue;
     border-style: solid;
 }
+
+.text-recipe{
+    margin-top: -20px;
+    font-size: 14px
+}

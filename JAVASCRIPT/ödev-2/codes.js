@@ -1,89 +1,154 @@
 
-
-let theNumber=1;
-
-
-let theClick= document.querySelector("#click");
-let theText= document.querySelector("#text");
+let addClick= document.querySelector("#add");
+let theText= document.querySelector("#inputText");
 let theToast= document.querySelector("#toast");
-let listGroup=document.querySelector("#list");
-let theCloseBtn=document.querySelector(`close${theNumber}`);
+let allList=document.querySelector(".list-group");
+let toast=document.querySelector("#toast");
+const ul=document.querySelector(".list-group")
 
 
+let store=[];
 
+run();
 
-function toast(message){
+function run() {
 
-    return `
-<div class="toast show top-0 end-0 position-absolute" data-bs-delay="4000" role="alert" aria-live="assertive" aria-atomic="true" style="float: right; position: static">
-  <div class="d-flex">
-    <div class="toast-body">
-      ${message}
-    </div>
-    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-  </div>
-    </div>
-
-    `
-
-}
-
-
-function addLi(className, text, theNumber) {
-
-        let createdLi=document.createElement("li");
-        createdLi.classList.add(className);
-
-        createdLi.innerHTML=
-        `
-        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-        <label class="form-check-label" for="firstCheckbox">
-        ${text}
-         </label>
-         <button type="button" id="close${theNumber}" class="btn-close" data-bs-dismiss="li${theNumber}" aria-label="Close" style="float: right"></button>
-
-    `;
-
-        localStorage.setItem(theNumber.toString(),text);
-
-
-    listGroup.appendChild(createdLi);
-
-    theNumber++;
+    addClick.addEventListener("click", add);
 
 
 }
 
 
-function removeLi() {
-    theNumber--;
+function addToast(message) {
 
-    let theLi=document.querySelector(`#li${theCloseBtn.id.valueOf().slice(5,theCloseBtn.id.length)}`);
-    theLi.remove();
+    const newToast = document.createElement("div");
+
+    newToast.classList.add("toast", "show", "top-0", "end-0", "position-absolute");
+    newToast.setAttribute("role","alert");
+    newToast.setAttribute("data-bs-delay","4000");
+    newToast.setAttribute("aria-live","assertive");
+    newToast.setAttribute("aria-atomic","true");
+    newToast.style.float="right";
+    newToast.style.position="static";
+
+    const div=document.createElement("div");
+    div.classList.add("d-flex");
+
+    const toastBody=document.createElement("div");
+    toastBody.classList.add("toast-body");
+
+    toastBody.textContent=message;
+
+    const button=document.createElement("button");
+    button.classList.add("btn-close", "me-2", "m-auto");
+    button.type="button";
+    button.setAttribute("data-bs-dismiss","toast");
+    button.setAttribute("aria-label","Close");
+
+    div.appendChild(toastBody);
+    div.appendChild(button);
+
+    newToast.appendChild(div);
+
+    toast.appendChild(newToast);
+
+    setTimeout(()=>{
+
+        newToast.remove();
+    }, 2000); //1 geçtikten sonra uygula demek.
+
+
 
 }
 
 
+function add(e) {
 
-theClick.addEventListener("click", function(){
 
-    if (theText.value === "" || theText.value==null){
+    const input= theText.value.trim();
 
-        theToast.innerHTML=toast("Listeye boş ekleme yapılamaz!");
+    if (input === "" || input==null){
+
+        addToast("Listeye boş ekleme yapılamaz!");
+
+        theText.value=null;
+
 
     }else {
 
+        //ARAYÜZE EKLE
 
-        addLi("list-group-item", theText.value);
+        addUI(input);
 
-        theToast.innerHTML=toast("Ekleme işlemi başarılı!");
 
+
+
+        //DEPOYA EKLE
+
+
+
+
+
+        addToast("Ekleme işlemi başarılı!");
+
+        theText.value=null;
 
 
     }
 
 
+    e.preventDefault();
 
-});
 
-theCloseBtn.addEventListener("click", removeLi());
+
+}
+
+
+function addUI(text) {
+
+    const a = document.createElement("div");
+    a.setAttribute("href", "#");
+    a.classList.add("list-group-item", "list-group-item-action", "list-group-item-primary");
+    a.textContent = text;
+
+    const button=document.createElement("button");
+    button.setAttribute("type","button");
+    button.className= "btn-close";
+    button.setAttribute("ara-label","Close");
+    button.style.float="right";
+
+    a.appendChild(button);
+
+    ul.appendChild(a);
+
+
+}
+
+function addStorage(text){
+
+    let theStore=JSON.parse(localStorage.getItem("store"));
+
+    if (theStore==null){
+
+        store.push(text);
+
+        localStorage.setItem("storage",JSON.stringify(store));
+
+    }else {
+
+        store.push(text);
+
+        localStorage.setItem("store",JSON.stringify(store));
+
+    }
+
+
+
+
+
+}
+
+
+
+
+

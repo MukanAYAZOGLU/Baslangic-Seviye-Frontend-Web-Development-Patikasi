@@ -13,6 +13,7 @@
 
 <div class="container" id = "container">
 
+<!-- ----------------------------------------------   1. SATIR  ------------------------  -->
     <div class="row" style="background-color: orange">
         <div class="col-sm-12">
 
@@ -24,34 +25,22 @@
               width: 50%;
               height: 50%;">
 
-            <p style="text-align: center; color: white; font-size: 30px">Yapılacaklar Listesi</p>
+            <p class="mt-2" style="text-align: center; color: white; font-size: 30px">Yapılacaklar Listesi</p>
 
-            <div class="mb-3"  style="text-align: center;">
-                <input type="text" placeholder="Bugün ne yapacaksınız?" id="text" style="width: 50%">
+            <div class="mb-2"  style="text-align: center;">
 
-                <button id="click" style="width: 15%" >
-                    Ekle
-                </button>
+                <form>
+                    <div class="mb-3 d-inline-block justify-content-center me-2">
+                        <input type="text" class="form-control" id="inputText" placeholder="Yapılacak..." aria-describedby="emailHelp" style="width: 100%;">
+                    </div>
+
+                    <button type="submit" id="add" class="btn btn-success d-inline-block">Ekle</button>
+                </form>
+
+
+
 
             </div>
-
-
-            <div class="row">
-
-
-                <div class="col-sm-12">
-
-                    <ul></ul>
-
-
-                </div>
-            </div>
-
-
-
-
-
-
 
 
 
@@ -62,17 +51,23 @@
 
     </div>
 
-    <div class="row">
+
+    <!-- ----------------------------------------------   2. SATIR  ------------------------  -->
+
+    <div class="row mt-2">
 
         <div class="col-sm-12">
 
-            <ul id="list" class="list-group">
-
+            <ul class="list-group">
 
             </ul>
 
 
+
+
         </div>
+
+
 
 
     </div>

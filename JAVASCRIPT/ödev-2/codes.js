@@ -1,8 +1,6 @@
 
-let addClick= document.querySelector("#add");
+let addClick= document.querySelector("#put");
 let theText= document.querySelector("#inputText");
-let theToast= document.querySelector("#toast");
-let allList=document.querySelector(".list-group");
 let toast=document.querySelector("#toast");
 const ul=document.querySelector(".list-group")
 
@@ -13,7 +11,11 @@ run();
 
 function run() {
 
-    addClick.addEventListener("click", add);
+    addClick.addEventListener("click", put);
+
+    document.addEventListener("DOMContentLoaded", reload);
+
+    ul.addEventListener("click",remove);
 
 
 }
@@ -61,9 +63,7 @@ function addToast(message) {
 
 }
 
-
-function add(e) {
-
+function put(e) {
 
     const input= theText.value.trim();
 
@@ -81,12 +81,9 @@ function add(e) {
         addUI(input);
 
 
-
-
         //DEPOYA EKLE
 
-
-
+        addStorage(input);
 
 
         addToast("Ekleme işlemi başarılı!");
@@ -102,7 +99,6 @@ function add(e) {
 
 
 }
-
 
 function addUI(text) {
 
@@ -126,24 +122,82 @@ function addUI(text) {
 
 function addStorage(text){
 
-    let theStore=JSON.parse(localStorage.getItem("store"));
-
-    if (theStore==null){
-
-        store.push(text);
-
-        localStorage.setItem("storage",JSON.stringify(store));
-
-    }else {
+        checkList();
 
         store.push(text);
 
         localStorage.setItem("store",JSON.stringify(store));
 
+
+
+
+}
+
+function reload() {
+
+    checkList();
+
+    store.forEach(text=>{
+
+        addUI(text);
+    })
+
+
+
+}
+
+function remove(event) {
+
+    if (event.target.className==="btn-close"){
+
+        console.log(event);
+
+        let a=event.target.parentElement;
+
+        let text=a.textContent;
+
+        //EKRANDAN SİLME
+
+        a.remove();
+
+        //DEPODAN SİLME
+
+        checkList();
+
+        store.forEach((item, index) => {
+
+            if (item==text){
+                store.splice(index,1);
+
+
+            }
+
+        });
+
+        localStorage.setItem("store",JSON.stringify(store));
+
+        addToast("Silme işlemi başarılı!")
+
+
+
     }
 
+    event.preventDefault();
 
 
+
+}
+
+function checkList() {
+
+    if (localStorage.getItem("store")==null) {
+
+        store=[];
+
+    }else {
+
+        store=JSON.parse(localStorage.getItem("store"));
+    }
 
 
 }

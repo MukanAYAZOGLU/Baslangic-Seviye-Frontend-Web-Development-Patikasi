@@ -17,6 +17,8 @@ function run() {
 
     ul.addEventListener("click",remove);
 
+    ul.addEventListener("click",lineIt);
+
 
 }
 
@@ -106,12 +108,16 @@ function addUI(text) {
     a.setAttribute("href", "#");
     a.classList.add("list-group-item", "list-group-item-action", "list-group-item-primary");
     a.textContent = text;
+    a.style.backgroundColor="lightblue";
+
+
 
     const button=document.createElement("button");
     button.setAttribute("type","button");
     button.className= "btn-close";
     button.setAttribute("ara-label","Close");
     button.style.float="right";
+
 
     a.appendChild(button);
 
@@ -150,8 +156,6 @@ function remove(event) {
 
     if (event.target.className==="btn-close"){
 
-        console.log(event);
-
         let a=event.target.parentElement;
 
         let text=a.textContent;
@@ -166,7 +170,7 @@ function remove(event) {
 
         store.forEach((item, index) => {
 
-            if (item==text){
+            if (item===text){
                 store.splice(index,1);
 
 
@@ -190,7 +194,7 @@ function remove(event) {
 
 function checkList() {
 
-    if (localStorage.getItem("store")==null) {
+    if (localStorage.getItem("store").length===0) {
 
         store=[];
 
@@ -198,6 +202,34 @@ function checkList() {
 
         store=JSON.parse(localStorage.getItem("store"));
     }
+
+
+}
+
+function lineIt(e) {
+
+    if (e.target.classList.contains("list-group-item")) {
+
+        let a = e.target;
+
+        if (a.style.textDecoration==="line-through"){
+
+            a.textContent=a.textContent.substring(2,a.textContent.length);
+            a.style.textDecoration="none";
+            a.style.backgroundColor="lightblue";
+
+
+        }else {
+            a.textContent="✓ "+a.textContent;
+            a.style.textDecoration="line-through";
+            a.style.backgroundColor="green";
+
+        }
+
+
+
+    }
+
 
 
 }

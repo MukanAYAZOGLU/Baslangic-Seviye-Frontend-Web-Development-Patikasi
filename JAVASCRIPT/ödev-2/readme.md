@@ -1,1 +1,1 @@
-![yapılacaklar-listesi.png](img/yap%C4%B1lacaklar-listesi.png)
+![img/yapılacaklar-listesi.png](img/yap%C4%B1lacaklar-listesi.png)

@@ -1,8 +1,14 @@
 
-let addClick= document.querySelector("#put");
-let theText= document.querySelector("#inputText");
-let toast=document.querySelector("#toast");
+const addClick= document.querySelector("#put");
+const theText= document.querySelector("#inputText");
+const toast=document.querySelector("#toast");
 const ul=document.querySelector(".list-group")
+const audioAdd=document.querySelector("#audioAdd");
+const audioDelete=document.querySelector("#audioDelete");
+const audioInfo=document.querySelector("#audioInfo");
+const audioError=document.querySelector("#audioError");
+const audioDone=document.querySelector("#audioDone");
+const secondRow=document.querySelector("#secondRow");
 
 
 let store=[];
@@ -21,7 +27,6 @@ function run() {
 
 
 }
-
 
 function addToast(message) {
 
@@ -75,6 +80,9 @@ function put(e) {
 
         theText.value=null;
 
+        audioInfo.currentTime=0;
+        audioInfo.play();
+
 
     }else {
 
@@ -92,6 +100,9 @@ function put(e) {
 
         theText.value=null;
 
+        audioAdd.currentTime=0;
+        audioAdd.play();
+
 
     }
 
@@ -104,7 +115,27 @@ function put(e) {
 
 function addUI(text) {
 
-    const a = document.createElement("div");
+    const li=document.createElement("li");
+
+    const div=document.createElement("div");
+    div.className="form-check";
+
+    const input=document.createElement("input");
+    div.style.display="block"
+
+    input.className="form-check-input";
+    input.type="checkbox";
+    input.id="checkDefault";
+    input.value="";
+
+
+    const label=document.createElement("label");
+    label.className="form-check-label";
+    label.setAttribute("for","checkDefault");
+    label.textContent="asd";
+
+
+    const a = document.createElement("a");
     a.setAttribute("href", "#");
     a.classList.add("list-group-item", "list-group-item-action", "list-group-item-primary");
     a.textContent = text;
@@ -118,10 +149,28 @@ function addUI(text) {
     button.setAttribute("ara-label","Close");
     button.style.float="right";
 
+    const checkbox= `
+
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+            <label class="form-check-label" for="checkDefault">
+                
+            </label>
+    </div>
+    
+    `
+
+
+
+
 
     a.appendChild(button);
-
-    ul.appendChild(a);
+    label.appendChild(a);
+    input.appendChild(label);
+    div.appendChild(input);
+    li.appendChild(div);
+    ul.appendChild(li);
+    //secondRow.appendChild(div);
 
 
 }
@@ -179,6 +228,9 @@ function remove(event) {
         });
 
         localStorage.setItem("store",JSON.stringify(store));
+
+        audioDelete.currentTime=0;
+        audioDelete.play();
 
         addToast("Silme işlemi başarılı!")
 

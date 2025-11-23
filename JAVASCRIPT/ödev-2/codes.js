@@ -6,9 +6,6 @@ const ul=document.querySelector(".list-group")
 const audioAdd=document.querySelector("#audioAdd");
 const audioDelete=document.querySelector("#audioDelete");
 const audioInfo=document.querySelector("#audioInfo");
-const audioError=document.querySelector("#audioError");
-const audioDone=document.querySelector("#audioDone");
-const secondRow=document.querySelector("#secondRow");
 
 
 let store=[];
@@ -115,25 +112,6 @@ function put(e) {
 
 function addUI(text) {
 
-    const li=document.createElement("li");
-
-    const div=document.createElement("div");
-    div.className="form-check";
-
-    const input=document.createElement("input");
-    div.style.display="block"
-
-    input.className="form-check-input";
-    input.type="checkbox";
-    input.id="checkDefault";
-    input.value="";
-
-
-    const label=document.createElement("label");
-    label.className="form-check-label";
-    label.setAttribute("for","checkDefault");
-    label.textContent="asd";
-
 
     const a = document.createElement("a");
     a.setAttribute("href", "#");
@@ -148,29 +126,11 @@ function addUI(text) {
     button.className= "btn-close";
     button.setAttribute("ara-label","Close");
     button.style.float="right";
-
-    const checkbox= `
-
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-            <label class="form-check-label" for="checkDefault">
-                
-            </label>
-    </div>
-    
-    `
-
-
-
+    button.style.a="absolute";
 
 
     a.appendChild(button);
-    label.appendChild(a);
-    input.appendChild(label);
-    div.appendChild(input);
-    li.appendChild(div);
-    ul.appendChild(li);
-    //secondRow.appendChild(div);
+    ul.appendChild(a);
 
 
 }
@@ -266,13 +226,11 @@ function lineIt(e) {
 
         if (a.style.textDecoration==="line-through"){
 
-            a.textContent=a.textContent.substring(2,a.textContent.length);
             a.style.textDecoration="none";
             a.style.backgroundColor="lightblue";
 
 
         }else {
-            a.textContent="✓ "+a.textContent;
             a.style.textDecoration="line-through";
             a.style.backgroundColor="green";
 
